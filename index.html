@@ -1,0 +1,69 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Moshkin Invest</title>
+  <style>
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background: #101827;
+      color: white;
+      font-family: Arial, sans-serif;
+      display: grid;
+      place-items: center;
+      text-align: center;
+    }
+    main { padding: 30px; max-width: 600px; }
+    h1 { font-size: 42px; }
+    p { color: #bdc8d8; line-height: 1.6; }
+    button {
+      background: #c59a43;
+      color: #101827;
+      border: 0;
+      padding: 18px 28px;
+      font-size: 17px;
+      font-weight: bold;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+    #video { display: none; margin-top: 25px; }
+    iframe { width: 100%; aspect-ratio: 16/9; border: 0; }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>MOSHKIN INVEST</h1>
+    <p>Инвестиции в будущее начинаются сегодня.</p>
+    <p>Откройте новые возможности вместе с нами.</p>
+
+    <button onclick="startVideo()">
+      НАЧАТЬ ИНВЕСТИРОВАТЬ
+    </button>
+
+    <div id="video">
+      <iframe
+        src=""
+        title="Rick Astley music video"
+        allow="autoplay; encrypted-media; picture-in-picture"
+        allowfullscreen>
+      </iframe>
+    </div>
+
+    <p style="font-size:12px">
+      Юмористический проект. Не является инвестиционной платформой.
+    </p>
+  </main>
+
+  <script>
+    function startVideo() {
+      const video = document.querySelector("#video");
+      video.style.display = "block";
+      video.querySelector("iframe").src =
+        "https://www.youtube-nocookie.com/embed/dQw4w9WgXcQ?autoplay=1";
+    }
+  </script>
+</body>
+</html>
