@@ -53,13 +53,26 @@
     </div>
   </main>
 
-  <script>
-    function startVideo() {
-      const video = document.querySelector("#video");
-      video.style.display = "block";
-      video.querySelector("iframe").src =
-        "https://www.youtube-nocookie.com/embed/dQw4w9WgXcQ?autoplay=1";
+<script>
+  function startVideo() {
+    const video = document.querySelector("#video");
+    const iframe = video.querySelector("iframe");
+
+    if (!video || !iframe) {
+      console.error("Video container or iframe not found");
+      return;
     }
-  </script>
+
+    video.style.display = "block";
+
+    iframe.src =
+      "https://www.youtube.com/embed/dQw4w9WgXcQ" +
+      "?autoplay=1" +
+      "&playsinline=1" +
+      "&rel=0" +
+      "&modestbranding=1";
+
+  }
+</script>
 </body>
 </html>
